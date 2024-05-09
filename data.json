@@ -1,0 +1,116 @@
+{
+  "coffees": [
+    {
+      "id": "d6992d2f-220d-4940-937d-4d3f78f7c271",
+      "title": "Expresso Tradicional",
+      "description": "O tradicional café feito com água quente e grãos moídos",
+      "tags": ["tradicional"],
+      "price": 9.9,
+      "image": "/assets/coffees/expresso.png"
+    },
+    {
+      "id": "3e11ee7b-f73d-4cc7-a497-3b89b2b1792d",
+      "title": "Expresso Americano",
+      "description": "Expresso diluído, menos intenso que o tradicional",
+      "tags": ["tradicional"],
+      "price": 9.9,
+      "image": "/assets/coffees/americano.png"
+    },
+    {
+      "id": "49f6fd29-6f80-48f0-a15b-5cb4f6570c38",
+      "title": "Expresso Cremoso",
+      "description": "Café expresso tradicional com espuma cremosa",
+      "tags": ["tradicional"],
+      "price": 9.9,
+      "image": "/assets/coffees/expresso-cremoso.png"
+    },
+    {
+      "id": "0e1f5021-f6de-4cd2-8332-74c37a9d9603",
+      "title": "Expresso Gelado",
+      "description": "Bebida preparada com café expresso e cubos de gelo",
+      "tags": ["tradicional", "gelado"],
+      "price": 9.9,
+      "image": "/assets/coffees/cafe-gelado.png"
+    },
+    {
+      "id": "f75465ef-3017-4ec4-a160-1196de81d3b4",
+      "title": "Café com Leite",
+      "description": "Meio a meio de expresso tradicional com leite vaporizado",
+      "tags": ["tradicional", "com leite"],
+      "price": 9.9,
+      "image": "/assets/coffees/cafe-com-leite.png"
+    },
+    {
+      "id": "d3aeb6d7-3ed4-4c2e-921d-82cfbf267514",
+      "title": "Latte",
+      "description": "Uma dose de café expresso com o dobro de leite e espuma cremosa",
+      "tags": ["tradicional", "com leite"],
+      "price": 9.9,
+      "image": "/assets/coffees/latte.png"
+    },
+    {
+      "id": "1f18f7fb-64e2-4978-8c32-23e49792182b",
+      "title": "Capuccino",
+      "description": "Bebida com canela feita de doses iguais de café, leite e espuma",
+      "tags": ["tradicional", "com leite"],
+      "price": 41.0,
+      "image": "/assets/coffees/capuccino.png"
+    },
+    {
+      "id": "f3f29c9f-f7e1-4c4e-84c7-f5fe4887d9e6",
+      "title": "Macchiato",
+      "description": "Café expresso misturado com um pouco de leite quente e espuma",
+      "tags": ["tradicional", "com leite"],
+      "price": 39.9,
+      "image": "/assets/coffees/macchiato.png"
+    },
+    {
+      "id": "64b2f108-d8cc-4a4a-b77f-1d6e1d6cf68f",
+      "title": "Mocaccino",
+      "description": "Café expresso misturado com um pouco de leite quente e espuma",
+      "tags": ["tradicional", "com leite"],
+      "price": 19.9,
+      "image": "/assets/coffees/mocaccino.png"
+    },
+    {
+      "id": "1b9d0db3-ec9a-456d-97e6-09b86a0bba80",
+      "title": "Chocolate Quente",
+      "description": "Bebida feita com chocolate dissolvido no leite quente e café",
+      "tags": ["especial", "com leite"],
+      "price": 9.9,
+      "image": "/assets/coffees/chocolate-quente.png"
+    },
+    {
+      "id": "03820ab0-5cf6-49a8-95b6-2d512efc20a5",
+      "title": "Cubano",
+      "description": "Drink gelado de café expresso com rum, creme de leite e hortelã",
+      "tags": ["especial", "alcoólico", "gelado"],
+      "price": 9.9,
+      "image": "/assets/coffees/cubano.png"
+    },
+    {
+      "id": "8c0320c2-d3ac-4eb3-b66b-f19aee6b1213",
+      "title": "Havaiano",
+      "description": "Bebida adocicada preparada com café e leite de coco",
+      "tags": ["especial"],
+      "price": 9.9,
+      "image": "/assets/coffees/havaiano.png"
+    },
+    {
+      "id": "672ab23b-64c7-44f0-8f0e-59cb9bb54725",
+      "title": "Árabe",
+      "description": "Bebida preparada com grãos de café árabe e especiarias",
+      "tags": ["especial"],
+      "price": 9.9,
+      "image": "/assets/coffees/arabe.png"
+    },
+    {
+      "id": "636a2ebd-1f7f-46fc-a2cd-40802203e8d2",
+      "title": "Irlandês",
+      "description": "Bebida a base de café, uísque irlandês, açúcar e chantilly",
+      "tags": ["especial", "alcoólico"],
+      "price": 9.9,
+      "image": "/assets/coffees/irlandes.png"
+    }
+  ]
+}
