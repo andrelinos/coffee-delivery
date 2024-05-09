@@ -1,9 +1,11 @@
+import { useEffect } from 'react'
 import {
   PiCurrencyDollar,
   PiMapPinFill,
   PiPrinter,
   PiTimerFill,
 } from 'react-icons/pi'
+import { useNavigate } from 'react-router-dom'
 
 import { Button } from '@/components/ui/button'
 import {
@@ -20,6 +22,7 @@ import { useOrdersStore } from '@/stores/order-store-finish'
 
 export function Success() {
   const { order, getTotal } = useOrdersStore()
+  const navigate = useNavigate()
 
   const paymentMethod = {
     card: 'Cartão',
@@ -34,6 +37,11 @@ export function Success() {
   const clientAddress = order
     ? `${order.client.street}, ${order.client.number}, ${order.client.neighborhood}, ${order.client.city}-${order.client.state}, ${order.client.cep}`
     : null
+  useEffect(() => {
+    if (order.products.length < 1) {
+      navigate('/')
+    }
+  }, [navigate, order.products.length])
 
   return (
     <div className="flex items-center flex-col w-full min-h-screen">

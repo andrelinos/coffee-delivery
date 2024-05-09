@@ -37,7 +37,9 @@ export function CoffeeListCard({ data }: CoffeeProps) {
       setIsItemAdded(true)
       setQuantity(1)
 
-      toast.success('Café adicionado com sucesso ao carrinho')
+      toast.success(
+        `O café ${data.title}, foi adicionado com sucesso ao carrinho!`,
+      )
     } catch (error) {
       toast.error('Ups" Ocorreu um erro ao adicionar o café ao carrinho')
     }

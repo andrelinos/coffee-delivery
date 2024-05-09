@@ -57,7 +57,8 @@ export type OrderInfo = z.infer<typeof orderSchema>
 const delivery = 5
 
 export const CartComponent = () => {
-  const { cart, getTotal, removeFromCart, updateQuantity } = useCartStore()
+  const { cart, getTotal, removeFromCart, updateQuantity, clearCart } =
+    useCartStore()
   const { addToOrder } = useOrdersStore()
   const navigate = useNavigate()
 
@@ -114,6 +115,8 @@ export const CartComponent = () => {
       addToOrder(client, cart)
 
       localStorage.setItem('@CoffeeDelivery-orders', JSON.stringify(dataToSend))
+
+      clearCart()
 
       navigate('/success')
     } catch (error) {

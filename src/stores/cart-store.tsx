@@ -16,6 +16,7 @@ type CartStateProps = {
   removeFromCart: (productId: string) => void
   updateQuantity: (productId: string, quantity: number) => void
   getTotal: () => number
+  clearCart: () => void
 }
 
 export const useCartStore = create<CartStateProps>((set) => ({
@@ -52,4 +53,6 @@ export const useCartStore = create<CartStateProps>((set) => ({
     useCartStore
       .getState()
       .cart.reduce((acc, item) => acc + item.price * (item.quantity || 0), 0),
+
+  clearCart: () => set({ cart: [] }),
 }))

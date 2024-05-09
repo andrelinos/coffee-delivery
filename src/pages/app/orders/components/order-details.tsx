@@ -1,11 +1,11 @@
 import { PiPrinter } from 'react-icons/pi'
+import { Link } from 'react-router-dom'
 
 import { Button } from '@/components/ui/button'
 import {
   Dialog,
   DialogClose,
   DialogContent,
-  DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
@@ -49,14 +49,30 @@ export function OrderDetails({
       <DialogTrigger asChild onClick={selectOrder}>
         <Button variant="outline">Detalhes</Button>
       </DialogTrigger>
-      <DialogContent className="w-full sm:max-w-3xl">
+      <DialogContent className="w-full sm:max-w-3xl print:top-0 print:translate-y-[2vh]">
         <DialogHeader>
-          <DialogTitle>Olá, {orderSelected?.client},</DialogTitle>
-          <DialogDescription>
-            Seu pedido está detalhado abaixo
-          </DialogDescription>
+          <DialogTitle>
+            <div className="w-full flex justify-between pr-6 print:pr-0 gap-4">
+              <div className="space-y-1">
+                <span> Olá, {orderSelected?.client},</span>
+                <p className="text-sm font-normal text-muted-foreground">
+                  Seu pedido está detalhado abaixo
+                </p>
+              </div>
+              <Link
+                to="/"
+                className="w-full pb-6 flex justify-center sm:w-auto"
+              >
+                <img
+                  src="/assets/logo.svg"
+                  alt="Logo Coffee Delivery"
+                  className="w-32 sm:w-auto"
+                />
+              </Link>
+            </div>
+          </DialogTitle>
         </DialogHeader>
-        <div id="table" className="flex w-full mt-10 flex-col">
+        <div id="table" className="flex w-full mt-10 print:mt-0 flex-col">
           <div className="flex flex-col gap-1">
             <h2 className="font-bold text-3xl font-baloo text-muted-foreground">
               Detalhes do seu pedido
