@@ -49,7 +49,7 @@ export function OrderDetails({
       <DialogTrigger asChild onClick={selectOrder}>
         <Button variant="outline">Detalhes</Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-3xl">
+      <DialogContent className="w-full sm:max-w-3xl">
         <DialogHeader>
           <DialogTitle>Olá, {orderSelected?.client},</DialogTitle>
           <DialogDescription>
@@ -57,16 +57,16 @@ export function OrderDetails({
           </DialogDescription>
         </DialogHeader>
         <div id="table" className="flex w-full mt-10 flex-col">
-          <div className="flex flex-col items-baseline gap-1">
+          <div className="flex flex-col gap-1">
             <h2 className="font-bold text-3xl font-baloo text-muted-foreground">
               Detalhes do seu pedido
             </h2>
-            <div className="text-xs px-6 w-full flex justify-between text-muted-foreground gap-1 pt-4 pb-2">
+            <div className="text-xs w-full flex sm:justify-between text-muted-foreground gap-1 pt-4 pb-2">
               <p>
                 <strong>Data do pedido</strong>:{' '}
                 {getLocalDate(orderSelected?.createdAt)}
               </p>
-              <p>
+              <p className="text-right">
                 <strong>Método de pagamento</strong>:{' '}
                 {orderSelected && paymentMethod[orderSelected?.paymentMethod]}
               </p>
@@ -79,10 +79,10 @@ export function OrderDetails({
             <TableHeader>
               <TableRow>
                 <TableHead>Produto</TableHead>
-                <TableHead className="w-20 text-right">Quantidade</TableHead>
+                <TableHead className="sm:w-20 text-right">Quant.</TableHead>
 
-                <TableHead className="w-20">Preço</TableHead>
-                <TableHead className="w-20 text-right">Total</TableHead>
+                <TableHead className="sm:w-20">Preço</TableHead>
+                <TableHead className="sm:w-20 text-right">Total</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -137,13 +137,13 @@ export function OrderDetails({
             </TableFooter>
           </Table>
         </div>
-        <DialogFooter>
+        <DialogFooter className="flex gap-4 mb-24 print:hidden">
           <DialogClose asChild>
             <Button type="button">Cancelar</Button>
           </DialogClose>
           <Button
             variant="outline"
-            className="p-0 print:hidden px-4 flex gap-2 font-normal text-xs text-brand-purple-500 hover:text-brand-purple-500 border-brand-purple-500 hover:bg-brand-purple-500/10 hover:bg-purple-200"
+            className="p-0 px-4 flex gap-2 font-normal text-xs text-brand-purple-500 hover:text-brand-purple-500 border-brand-purple-500 hover:bg-brand-purple-500/10 hover:bg-purple-200"
             onClick={printTable}
           >
             <PiPrinter size={22} />

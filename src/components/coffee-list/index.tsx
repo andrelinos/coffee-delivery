@@ -12,7 +12,7 @@ export interface ProductProps {
 
 export function CoffeeList() {
   return (
-    <div className="flex w-full gap-8 pt-24 flex-wrap justify-center">
+    <div className="flex w-full h-auto gap-8 py-24 flex-wrap justify-center">
       {coffees.map((coffee: ProductProps, index) => (
         <CoffeeListCard key={index} data={coffee} />
       ))}

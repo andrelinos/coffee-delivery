@@ -75,7 +75,7 @@ export const CartComponent = () => {
   const onSubmit = handleSubmit(async (values) => {
     if (cart.length === 0) {
       return toast.error(
-        'Você não pode finalizar a compra com o carrinho vazio 1',
+        'Você não pode finalizar a compra com o carrinho vazio',
         {
           action: {
             label: 'Ir às compras',
@@ -220,6 +220,7 @@ export const CartComponent = () => {
               className="col-span-1"
               type="text"
               placeholder="UF"
+              maxLength={2}
               onError={errors.state}
               {...register('state')}
             />
@@ -243,9 +244,10 @@ export const CartComponent = () => {
           </div>
           <div
             className={clsx(
-              'grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6 border border-transparent rounded-md p-2',
+              'grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6 border  rounded-md p-2',
               {
-                'border-red-400 ': errors.paymentMethod,
+                'border-red-400 dark:border-red-400 ': errors.paymentMethod,
+                'border-transparent ': !errors.paymentMethod,
               },
             )}
           >

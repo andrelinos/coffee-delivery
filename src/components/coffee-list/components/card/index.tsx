@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { PiMinus, PiPlus, PiShoppingCartFill } from 'react-icons/pi'
+import { toast } from 'sonner'
 
 import { Button } from '@/components/ui/button'
 import { useCartStore } from '@/stores/cart-store'
@@ -30,10 +31,16 @@ export function CoffeeListCard({ data }: CoffeeProps) {
   }
 
   function handleAddItem() {
-    addToCart({ ...data, quantity })
-    updateQuantity(data.id, quantity)
-    setIsItemAdded(true)
-    setQuantity(1)
+    try {
+      addToCart({ ...data, quantity })
+      updateQuantity(data.id, quantity)
+      setIsItemAdded(true)
+      setQuantity(1)
+
+      toast.success('Café adicionado com sucesso ao carrinho')
+    } catch (error) {
+      toast.error('Ups" Ocorreu um erro ao adicionar o café ao carrinho')
+    }
   }
 
   return (

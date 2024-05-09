@@ -57,6 +57,13 @@ export function Orders() {
     setOrderSelected(order)
   }
 
+  function handleDeleteOrder(orderId: string) {
+    const updatedOrder = orders.filter((order) => order.id !== orderId)
+    localStorage.setItem('@CoffeeDelivery-orders', JSON.stringify(updatedOrder))
+
+    setOrders(updatedOrder)
+  }
+
   useEffect(() => {
     const ordersStored = localStorage.getItem('@CoffeeDelivery-orders') ?? ''
     if (ordersStored) {
@@ -67,12 +74,34 @@ export function Orders() {
     }
   }, [])
 
+  if (orders.length < 1) {
+    return (
+      <div className="flex items-center flex-col w-full">
+        <div className="w-full max-w-6xl flex flex-col gap-6">
+          <div className="flex items-baseline gap-4">
+            <h2 className="font-bold text-3xl font-baloo text-muted-foreground">
+              Seus pedidos
+            </h2>
+          </div>
+        </div>
+        <div className="w-full h-80 flex justify-center items-center">
+          <h3 className="text-muted-foreground">
+            Você ainda não tem nenhum pedido realizado
+          </h3>
+        </div>
+        <p className="text-muted-foreground opacity-70">
+          A Coffee Delivery agradece suas compras. 💜
+        </p>
+      </div>
+    )
+  }
+
   return (
     <div className="flex items-center flex-col w-full">
       <div className="w-full max-w-6xl flex flex-col gap-6">
         <div className="flex items-baseline gap-4">
           <h2 className="font-bold text-3xl font-baloo text-muted-foreground">
-            Detalhes do seu pedido
+            Seus pedidos
           </h2>
         </div>
         <Table>
@@ -108,7 +137,10 @@ export function Orders() {
                       selectOrder={() => handleViewOrder(order)}
                       orderSelected={orderSelected}
                     />
-                    <Button variant="ghost">
+                    <Button
+                      variant="ghost"
+                      onClick={() => handleDeleteOrder(order.id)}
+                    >
                       <PiTrash size={22} className="text-red-400" />
                     </Button>
                   </div>
@@ -119,7 +151,7 @@ export function Orders() {
           <TableFooter>
             <TableRow>
               <TableCell colSpan={4} className="text-xs font-light">
-                Pedidos realizados: 10
+                Pedidos realizados: <strong>{orders.length}</strong>
               </TableCell>
             </TableRow>
           </TableFooter>

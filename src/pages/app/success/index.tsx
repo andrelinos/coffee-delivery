@@ -36,7 +36,7 @@ export function Success() {
     : null
 
   return (
-    <div className="flex items-center flex-col w-full">
+    <div className="flex items-center flex-col w-full min-h-screen">
       <div className="w-full max-w-6xl flex flex-col gap-6">
         <div className="flex-flex-col gap-2">
           <h2 className="font-bold text-3xl font-baloo text-brand-yellow-500">
