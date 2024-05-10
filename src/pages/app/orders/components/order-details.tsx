@@ -72,7 +72,7 @@ export function OrderDetails({
             </div>
           </DialogTitle>
         </DialogHeader>
-        <div id="table" className="flex w-full mt-10 print:mt-0 flex-col">
+        <div id="table" className="flex w-full print:mt-0 flex-col">
           <div className="flex flex-col gap-1">
             <h2 className="font-bold text-3xl font-baloo text-muted-foreground">
               Detalhes do seu pedido
@@ -153,20 +153,22 @@ export function OrderDetails({
             </TableFooter>
           </Table>
         </div>
-        <DialogFooter className="flex gap-4 mb-24 print:hidden">
-          <DialogClose asChild>
-            <Button variant="default" type="button">
-              Cancelar
+        <DialogFooter className="flex gap-4 items-end print:hidden">
+          <div className="flex gap-4 mt-auto">
+            <DialogClose asChild>
+              <Button variant="default" type="button">
+                Cancelar
+              </Button>
+            </DialogClose>
+            <Button
+              variant="outline"
+              className="p-0 px-4 flex gap-2 font-normal text-xs text-brand-purple-500 hover:text-brand-purple-500 border-brand-purple-500 hover:bg-brand-purple-500/10 hover:bg-purple-200"
+              onClick={printTable}
+            >
+              <PiPrinter size={22} />
+              <span>IMPRIMIR</span>
             </Button>
-          </DialogClose>
-          <Button
-            variant="outline"
-            className="p-0 px-4 flex gap-2 font-normal text-xs text-brand-purple-500 hover:text-brand-purple-500 border-brand-purple-500 hover:bg-brand-purple-500/10 hover:bg-purple-200"
-            onClick={printTable}
-          >
-            <PiPrinter size={22} />
-            <span>IMPRIMIR</span>
-          </Button>
+          </div>
         </DialogFooter>
       </DialogContent>
     </Dialog>
