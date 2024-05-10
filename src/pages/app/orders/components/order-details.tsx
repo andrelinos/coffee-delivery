@@ -155,7 +155,9 @@ export function OrderDetails({
         </div>
         <DialogFooter className="flex gap-4 mb-24 print:hidden">
           <DialogClose asChild>
-            <Button type="button">Cancelar</Button>
+            <Button variant="default" type="button">
+              Cancelar
+            </Button>
           </DialogClose>
           <Button
             variant="outline"

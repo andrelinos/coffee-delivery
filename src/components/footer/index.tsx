@@ -46,7 +46,7 @@ export function Footer() {
       <Link
         to="https://whatsapp.com"
         target="_blank"
-        className="fixed group bottom-20 p-0 flex gap-2 items-center right-6 bg-green-500 rounded-full w-12 justify-center h-12 transition-all duration-300 ease-in-out hover:w-52"
+        className="fixed group bottom-6 z-[99999] p-0 flex gap-2 items-center right-6 bg-green-500 rounded-full w-12 justify-center h-12 transition-all duration-300 ease-in-out hover:w-52"
       >
         <PiWhatsappLogo
           size={32}
