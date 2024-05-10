@@ -100,11 +100,11 @@ export function Success() {
             </div>
           </div>
           <div className="flex justify-center print:hidden">
-            <img src="/public/assets/delivery.svg" alt="" />
+            <img src="/assets/delivery.svg" alt="" />
           </div>
         </div>
       </div>
-      <div id="table" className="flex w-full mt-10 flex-col">
+      <div id="table" className="flex w-full mt-10 flex-col max-w-6xl">
         <div className="flex items-baseline gap-4">
           <h2 className="font-bold text-3xl font-baloo text-muted-foreground">
             Detalhes do seu pedido
@@ -124,7 +124,7 @@ export function Success() {
           </TableCaption>
           <TableHeader>
             <TableRow>
-              <TableHead>Produto</TableHead>
+              <TableHead>Café</TableHead>
               <TableHead className="w-[100px] text-right">Quantidade</TableHead>
               <TableHead className="w-[100px]">Preço</TableHead>
               <TableHead className="text-right">Total</TableHead>

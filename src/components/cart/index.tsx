@@ -141,8 +141,6 @@ export const CartComponent = () => {
     updateQuantity(productId, quantity)
   }
 
-  console.log(errors)
-
   return (
     <form
       onSubmit={onSubmit}
@@ -177,7 +175,7 @@ export const CartComponent = () => {
             />
             <Input
               className="col-span-2 appearance-none"
-              placeholder="CEP"
+              placeholder="CEP (ex: 36800111)"
               type="text"
               onError={errors.cep}
               {...register('cep')}
