@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { PiTrash } from 'react-icons/pi'
+import { PiTrashLight } from 'react-icons/pi'
 
 import { Button } from '@/components/ui/button'
 import {
@@ -98,21 +98,23 @@ export function Orders() {
 
   return (
     <div className="flex items-center flex-col w-full">
-      <div className="w-full max-w-6xl flex flex-col gap-6">
+      <div className="w-full max-w-6xl flex flex-col gap-6 bg-muted rounded-lg">
         <div className="flex items-baseline gap-4">
-          <h2 className="font-bold text-3xl font-baloo text-muted-foreground">
+          <h2 className="font-bold text-3xl font-baloo text-muted-foreground px-4 pt-2">
             Seus pedidos
           </h2>
         </div>
-        <Table>
-          <TableCaption>
+        <Table className="">
+          <TableCaption className="pt-8 pb-12">
             A Coffee Delivery agradece suas compras. 💜
           </TableCaption>
           <TableHeader>
             <TableRow>
               <TableHead className="">Data da compra</TableHead>
-              <TableHead className="w-[120px]">Valor</TableHead>
-              <TableHead className="w-[200px]">Método de pagamento</TableHead>
+              <TableHead className="sm:w-[120px]">Valor</TableHead>
+              <TableHead className="sm:w-[200px]">
+                Método de pagamento
+              </TableHead>
               <TableHead className="text-right">Detalhes</TableHead>
             </TableRow>
           </TableHeader>
@@ -132,7 +134,7 @@ export function Orders() {
                   {paymentMethod[order.paymentMethod]}
                 </TableCell>
                 <TableCell className="text-right font-baloo">
-                  <div className="flex items-center gap-1 justify-end">
+                  <div className="flex items-center gap-4 justify-end">
                     <OrderDetails
                       selectOrder={() => handleViewOrder(order)}
                       orderSelected={orderSelected}
@@ -140,8 +142,9 @@ export function Orders() {
                     <Button
                       variant="ghost"
                       onClick={() => handleDeleteOrder(order.id)}
+                      className="p-0"
                     >
-                      <PiTrash size={22} className="text-red-400" />
+                      <PiTrashLight size={22} className="text-red-400" />
                     </Button>
                   </div>
                 </TableCell>

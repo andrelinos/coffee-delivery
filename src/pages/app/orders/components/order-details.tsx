@@ -1,4 +1,4 @@
-import { PiPrinter } from 'react-icons/pi'
+import { PiListMagnifyingGlass, PiPrinter } from 'react-icons/pi'
 import { Link } from 'react-router-dom'
 
 import { Button } from '@/components/ui/button'
@@ -47,9 +47,12 @@ export function OrderDetails({
   return (
     <Dialog>
       <DialogTrigger asChild onClick={selectOrder}>
-        <Button variant="outline">Detalhes</Button>
+        <Button variant="ghost" className="p-0 gap-1 sm:px-4 sm:border">
+          <PiListMagnifyingGlass size={22} className="text-brand-purple-500" />
+          <span className="hidden sm:block text-xs font-normal">Detalhes</span>
+        </Button>
       </DialogTrigger>
-      <DialogContent className="w-full sm:max-w-3xl print:top-0 print:translate-y-[2vh]">
+      <DialogContent className="w-full sm:max-w-3xl print:top-0 print:translate-y-[2vh] bg-muted rounded-lg">
         <DialogHeader>
           <DialogTitle>
             <div className="w-full flex justify-between pr-6 print:pr-0 gap-4">

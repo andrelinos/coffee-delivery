@@ -52,7 +52,7 @@ export function Success() {
           </h2>
           <p className="text-muted-foreground mt-2">
             Olá, <strong>{order.client.client}</strong>, agora é só aguardar que
-            logo o seu café chegará até você
+            logo o seu café chegará até você.
           </p>
         </div>
         <div className="grid lg:grid-cols-2 gap-6">
@@ -119,7 +119,7 @@ export function Success() {
           </Button>
         </div>
         <Table>
-          <TableCaption>
+          <TableCaption className="pt-8 pb-12">
             A Coffee Delivery agradece a sua compra. 💜
           </TableCaption>
           <TableHeader>

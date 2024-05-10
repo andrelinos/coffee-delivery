@@ -9,7 +9,7 @@ export function Hero() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 w-full gap-6">
       <div className="order-2 lg:order-1">
-        <h2 className="text-5xl font-semibold tracking-tight text-brand-gray-800 dark:text-brand-gray-100">
+        <h2 className="text-3xl lg:text-5xl mt-6 font-baloo font-bold tracking-tight text-brand-gray-800 dark:text-brand-gray-100">
           Encontre o café perfeito para qualquer hora do dia
         </h2>
         <p className="py-4 text-muted-foreground">

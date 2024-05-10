@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 
 export function Footer() {
   return (
-    <div className="flex relative w-full items-center flex-col pb-24">
+    <div className="flex relative w-full items-center flex-col py-24">
       <div className="flex justify-between max-w-6xl w-full px-6">
         <Link to="/">
           <img src="/assets/logo.svg" alt="Logo Coffee Delivery" />

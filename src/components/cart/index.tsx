@@ -174,11 +174,19 @@ export const CartComponent = () => {
               {...register('client')}
             />
             <Input
-              className="col-span-2 appearance-none"
+              className="col-span-4 lg:col-span-2"
               placeholder="CEP (ex: 36800111)"
               type="text"
               onError={errors.cep}
               {...register('cep')}
+            />
+            <Input
+              className="col-span-2"
+              type="text"
+              placeholder="UF"
+              maxLength={2}
+              onError={errors.state}
+              {...register('state')}
             />
             <Input
               className="col-span-6"
@@ -204,26 +212,18 @@ export const CartComponent = () => {
             />
 
             <Input
-              className="col-span-2"
+              className="col-span-6 lg:col-span-3 "
               type="text"
               placeholder="Bairro"
               onError={errors.neighborhood}
               {...register('neighborhood')}
             />
             <Input
-              className="col-span-3"
+              className="col-span-6 lg:col-span-3 "
               type="text"
               placeholder="Cidade"
               onError={errors.city}
               {...register('city')}
-            />
-            <Input
-              className="col-span-1"
-              type="text"
-              placeholder="UF"
-              maxLength={2}
-              onError={errors.state}
-              {...register('state')}
             />
           </div>
         </div>
